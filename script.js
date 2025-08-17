@@ -55,5 +55,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const texts = [ "Cybersecurity Enthusiast","Knowledge of IoT and AI Technologies", "Programmer", "Designer"];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+let isDeleting = false;
+
+function type() {
+  if (count === texts.length) {
+    count = 0;
+  }
+  currentText = texts[count];
+
+  if (isDeleting) {
+    letter = currentText.slice(0, --index);
+  } else {
+    letter = currentText.slice(0, ++index);
+  }
+
+  document.getElementById('typing').textContent = letter;
+
+  let speed = isDeleting ? 100 : 150;
+
+  if (!isDeleting && letter.length === currentText.length) {
+    speed = 2000; // توقف بعد ما يكتب الكلمة
+    isDeleting = true;
+  } else if (isDeleting && letter.length === 0) {
+    isDeleting = false;
+    count++;
+    speed = 500;
+  }
+
+  setTimeout(type, speed);
+}
+
+type();
+
 
 

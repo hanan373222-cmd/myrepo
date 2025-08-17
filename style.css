@@ -43,13 +43,22 @@ ul{
     display: flex;
     align-items: center;
     gap: 3em;
+    list-style: none;
 
 }
 
+.linkss{
+
+    margin-left: 37%;
+}
+
+
 nav ul a{
 color: white;
-opacity: 0.7;
+opacity: 0.4;
 transition: 0.2s ease-in-out;
+font-size: large;
+margin-right: 0.2em;
 
 }
 
@@ -63,7 +72,7 @@ opacity: 1;
     font-size: 2em;
     color: white;
     font-weight: 800;
-    opacity: 0.8;
+    opacity: 0.6;
     transition: 0.3s ease;
     
 }
@@ -175,7 +184,11 @@ section{
 }
 
 .info-box p{
-    opacity: 0.7;
+    opacity: 0.8;
+    font-size: medium;
+    text-align: center;
+    
+    
 
 }
 
@@ -224,6 +237,7 @@ section{
     align-items: center;
     justify-content: center;
     gap: 5em;
+    text-align: justify;
 }
 
 #about img {
@@ -247,6 +261,8 @@ section{
 .about-box p{
     color: white;
     opacity: 0.8;
+    text-align: left;
+    text-align: justify;
 }
 
 .skills{
@@ -293,17 +309,17 @@ i {
     color: #6cff52;
 }
 
-#services{
+#Programs{
     background-color: var(--background);
 }    
 
 .header{
     text-align: center;
-    font-size: 5em;
+    font-size: 6em;
     margin: 0.5em 0;
 }
 
-.services-container{
+.Programs-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 2em;
@@ -471,15 +487,20 @@ footer{
     text-align: center;
     background: rgba(0, 0, 0, 0.9);
     display: none;
+    gap: 3.5em;
+    margin-left: 27em;
+    list-style: none;
+    
 
     }
 
 
     .links  a{
-    margin: 2em  0;
+    margin : 5em 0;
     display: block;
     font-size: 1.5em;
     color: white;
+    
     }
 
     .links.active{
@@ -535,7 +556,7 @@ footer{
     gap: 3em;
     }
 
-   #services .header{
+   #Programs .header{
        font-size: 3em;
     }
 
@@ -560,5 +581,33 @@ footer{
 
 }
 
+
+
+
+
+#home img {
+  width: 18vw;
+  border-radius: 50%;
+  margin-top: 3em;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#home img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(62, 255, 223, 0.7);
+}
+
+
+
+
+
+
+
+#typing {
+  font-size: 1.7em;
+  color:  (#6cff52, #3ec5ff);
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 
